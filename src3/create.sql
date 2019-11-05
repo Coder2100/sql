@@ -1,0 +1,17 @@
+CREATE TABLE flights (
+    id SERIAL PRIMARY KEY,
+    origin VARCHAR NOT NULL,
+    destination VARCHAR NOT NULL,
+    duration INTEGER NOT NULL
+);
+
+CREATE TABLE passengers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), flight_id INTEGER REFERENCES flights);# Mysql
+CREATE TABLE reviews (
+    id SERIAL PRIMARY KEY,
+    rating VARCHAR NOT NULL,
+    message VARCHAR NOT NULL,
+    isbn VARCHAR NOT NULL,
+    name VARCHAR NOT NULL,
+    review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    book_id INTEGER REFERENCES books
+    );
