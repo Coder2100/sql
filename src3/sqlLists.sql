@@ -1,14 +1,4 @@
-<<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
-</head>
-<body>
+
     List of SQL Commands
 Glossary of commonly used SQL commands
 BACKGROUND
@@ -18,7 +8,7 @@ Here’s an appendix of commonly used commands.
 
 COMMANDS
 ALTER TABLE
-ALTER TABLE table_name 
+ALTER TABLE table_name
 ADD column_name datatype;
 ALTER TABLE lets you add columns to a table in a database.
 
@@ -62,8 +52,8 @@ COUNT() is a function that takes the name of a column as an argument and counts 
 
 CREATE TABLE
 CREATE TABLE table_name (
-  column_1 datatype, 
-  column_2 datatype, 
+  column_1 datatype,
+  column_2 datatype,
   column_3 datatype
 );
 CREATE TABLE creates a new table in the database. It allows you to specify the name of the table and the name of each column in the table.
@@ -94,7 +84,7 @@ JOIN table_2
 An inner join will combine rows from different tables if the join condition is true.
 
 INSERT
-INSERT INTO table_name (column_1, column_2, column_3) 
+INSERT INTO table_name (column_1, column_2, column_3)
 VALUES (value_1, 'value_2', value_3);
 INSERT statements are used to add a new row to a table.
 
@@ -152,7 +142,7 @@ FROM table_name;
 ROUND() is a function that takes a column name and an integer as an argument. It rounds the values in the column to the number of decimal places specified by the integer.
 
 SELECT
-SELECT column_name 
+SELECT column_name
 FROM table_name;
 SELECT statements are used to fetch data from a database. Every query will begin with SELECT.
 
@@ -188,5 +178,3 @@ WHERE column_name operator value;
 WITH clause lets you store the result of a query in a temporary table using an alias. You can also define multiple temporary tables using a comma and with one instance of the WITH keyword.
 
 The WITH clause is also known as common table expression (CTE) and subquery factoring.
-</body>
-</html>
