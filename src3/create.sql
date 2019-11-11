@@ -96,3 +96,30 @@ ALTER TABLE sales_item ADD day_of_week VARCHAR(8)
 // Modify a column (Change any Constraint this Way)
 
 ALTER TABLE sales_item MODIFY day_of_week VARCHAR(9) NOT NULL
+
+//MYSQL syntax
+ALTER TABLE sales_item CHANGE `day_of_week` `weekday` VARCHAR(8);
+
+// deleting column
+ALTER TABLE sales_item DROP  COLUMN weekday;
+
+
+CREATE TABLE transaction_type(
+name VARCHAR(30) NOT NULL,
+payment_type VARCHAR(30) NOT NULL,
+id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+
+
+RENAME TABLE transaction_type TO transaction;
+
+CREATE INDEX transaction_id ON transaction(name);
+
+
+CREATE INDEX transaction_id_2 ON transaction(name, payment_type);
+
+// deleting the actual table
+DROP TABLE transaction;
+
+// Delete data in a table
+TRUNCATE TABLE transaction
